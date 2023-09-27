@@ -34,7 +34,8 @@ header {
 }
 
 section {
-    
+    height: 100%;
+    width: 100%;
     padding: 100px 200px;
 }
 .container-head a {
@@ -123,7 +124,7 @@ section {
     width: 100%;
 }
 .waveWrapperInner {
-    position: absolute;
+    position: fixed;
     width: 100%;
     overflow: hidden;
     height: 100%;
@@ -207,6 +208,37 @@ section {
     /* Hide the main image on smaller screens */
     .main img {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .main h1 {
+
+        font-size: 100px;
+    }
+    .main p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    
+    .container-head .info {
+        margin: 5px;
+        background-color: #252525;
+    }
+    
+    
+}
+@media screen and (max-width: 660px) {
+    .main h1 {
+
+        font-size: 50px;
+    }
+    .main p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .main a {
+        font-size: 15px;
     }
 }
 
