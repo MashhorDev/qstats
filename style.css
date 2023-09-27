@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Kanit:wght@300;500&family=Prompt:wght@700&family=Space+Grotesk:wght@700&display=swap');
+
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #202020;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+}
+
+.navi {
+    justify-content: right;
+    width: 100%;
+    display: flex;
+}
+.navi a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 400;
+    font-size: 1.3em;
+    padding-left: 20px;
+    transition: 0.5s ;
+    cursor: pointer;
+}
+
+section {
+    
+    padding: 100px 200px;
+}
+.container-head a {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: rgb(91, 60, 202);
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    padding: 10px 50px;
+    transition: 0.3s ease;
+}
+.container-head a:hover {
+    transform: scale(1.1);
+}
+.main {
+    justify-content: space-between;
+    color: #f1f1f1;
+    width: 100%;
+    min-height: 100vh;
+    display:flex ;
+    align-items: center;
+    
+}
+.main h1 {
+    
+    font-size: 100px;
+}
+.main p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.container-head .info {
+    margin: 10px;
+    background-color: #252525;
+}
+.container-head{
+    padding-left: 50px;
+}
+.main img {
+    margin-left: 500px;
+    height: 100%;
+    justify-content: right;
+    width: 430px;
+    animation: anime 5.5s ease-in-out alternate infinite;
+
+
+
+}
+@keyframes anime {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-50px);
+      }
+    }    
+
+  
+
+  @keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    z-index: -10;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .navi {
+        display: none; /* Hide the navigation links on smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Show the burger menu icon on smaller screens */
+    .burger-menu {
+        display: block;
+    }
+
+    .navi.active {
+        display: flex; /* Show the navigation links when the burger menu is active */
+    }
+
+    .navi a {
+        padding: 10px 0;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    .container-head {
+        padding-left: 20px;
+    }
+
+    /* Hide the main image on smaller screens */
+    .main img {
+        display: none;
+    }
+}
+
